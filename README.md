@@ -10,3 +10,18 @@ Proyecto completo que cubre:
 - **Parte 6**: Propuesta de startup/innovación.
 
 ## Estructura
+app/app.py
+reports/estadistica.md
+reports/startup.md
+notebooks/laboratorio.ipynb
+data/raw/04-18-2022.csv
+data/processed/sample50.xlsx
+requirements.txt
+.gitignore
+README.md
+
+## Datos
+- Daily report (18-04-2022): `data/raw/04-18-2022.csv`
+- Para series de tiempo (Parte 3), el notebook descarga múltiples daily reports alrededor de esa fecha directamente desde el repo público de JHU.
+
+
