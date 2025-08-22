@@ -249,7 +249,9 @@ with tab4:
     from sklearn.decomposition import PCA
     from sklearn.cluster import KMeans
 
-    X = country_agg[["Confirmed_100k","Deaths_100k","CFR"]].replace([np.inf,-np.inf], np.nan).dropna()
+    X = country_agg.set_index("Country_Region")[["Confirmed_100k","Deaths_100k","CFR"]] \
+        .replace([np.inf,-np.inf], np.nan).dropna()
+
     base = country_agg.set_index("Country_Region").loc[X.index]
     scaler = StandardScaler()
     Xs = scaler.fit_transform(X)
